@@ -34,8 +34,6 @@ public class Demo {
 
     Human human1 = new Human(50, "Broski");
     Human human2 = new Human(100, "Jide");
-    // human1.setAge(50);
-    // human1.setName("Broli");
 
     System.out.println(human1.getName());
     System.out.println(human1.getAge());
