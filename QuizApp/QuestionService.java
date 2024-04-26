@@ -41,6 +41,23 @@ public class QuestionService {
 			for (String s : userAnswers) {
 				System.out.println(s);
 			}
+
 		}
+	}
+
+	public void printScore() {
+		int score = 0;
+
+		for (int i = 0; i < questions.length; i++) {
+			Question que = questions[i];
+			String answer = que.getAnswer();
+			String userChoice = userAnswers[i];
+
+			if (answer.equals(userChoice)) {
+				score++;
+			}
+		}
+
+		System.out.println("Your scroe is : " + score + "out of " + questions.length);
 	}
 }
