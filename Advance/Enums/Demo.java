@@ -51,8 +51,9 @@ public class Demo {
 
 		printDay(today);
 
-		Direction direction = Direction.EAST;
-		System.out.println("Abbreviation for EAST is " + direction.getAbbreviation());
+		for (Direction direction : Direction.values()) {
+			System.out.println("Abbreviation for " + direction + " is " + direction.getAbbreviation());
+		}
 	}
 
 	static void printDay(Day day) {
