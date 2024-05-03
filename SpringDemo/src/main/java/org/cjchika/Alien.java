@@ -3,15 +3,15 @@ package org.cjchika;
 public class Alien {
 
     private int age;
-    private Laptop laptop;
+    private Computer computer;
 
     public Alien(){
-        System.out.println("In Alien, Object created!!!");
+//        System.out.println("In Alien, Object created!!!");
     }
 
-    public Alien(int age, Laptop laptop){
+    public Alien(int age, Computer com){
        this.age = age;
-       this.laptop = laptop;
+       this.computer = com;
     }
 
     public int getAge() {
@@ -19,20 +19,20 @@ public class Alien {
     }
 
     public void setAge(int age) {
-        System.out.println("Called setter");
+//        System.out.println("Called setter");
         this.age = age;
     }
 
     public void code(){
         System.out.println("Coding...");
-        laptop.compile();
+        computer.compile();
     }
 
-    public Laptop getLaptop() {
-        return laptop;
+    public Computer getLaptop() {
+        return computer;
     }
 
-    public void setLaptop(Laptop laptop) {
-        this.laptop = laptop;
+    public void setLaptop(Computer com) {
+        this.computer = com;
     }
 }
