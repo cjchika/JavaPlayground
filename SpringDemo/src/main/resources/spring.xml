@@ -3,7 +3,19 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-        <bean id="alien" class="com.cjchika.Alien">
+<!--        <bean id="alien" class="org.cjchika.Alien" scope="prototype"></bean>-->
+
+        <bean id="alien" class="org.cjchika.Alien" >
+<!--                <property name="age" value="43" />-->
+<!--                <property name="laptop" ref="laptop" />-->
+<!--                <constructor-arg value="100"/>-->
+<!--                <constructor-arg ref="laptop"/>-->
+
+                <constructor-arg index="1" ref="laptop"/>
+                <constructor-arg index="0" value="100"/>
+        </bean>
+
+        <bean id="laptop" class="org.cjchika.Laptop">
         </bean>
 
 </beans>
