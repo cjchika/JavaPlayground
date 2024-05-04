@@ -11,6 +11,7 @@ public class SpringIntroApplication {
 		ApplicationContext context = SpringApplication.run(SpringIntroApplication.class, args);
 		Alien alien = context.getBean(Alien.class);
 		alien.code();
+		System.out.println(alien.getAge());
 	}
 
 }
