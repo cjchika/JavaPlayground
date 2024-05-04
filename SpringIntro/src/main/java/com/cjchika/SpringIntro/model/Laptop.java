@@ -1,4 +1,4 @@
-package com.cjchika.SpringIntro;
+package com.cjchika.SpringIntro.model;
 
 import org.springframework.stereotype.Component;
 

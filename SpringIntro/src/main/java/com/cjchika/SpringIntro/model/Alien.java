@@ -1,4 +1,4 @@
-package com.cjchika.SpringIntro;
+package com.cjchika.SpringIntro.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
