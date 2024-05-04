@@ -1,8 +1,14 @@
 package org.cjchika;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Alien {
 
     private int age;
+
+    @Autowired
     private Computer computer;
 
     public Alien(){
