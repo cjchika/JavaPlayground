@@ -28,11 +28,11 @@ public class Alien {
         computer.compile();
     }
 
-    public Computer getLaptop() {
+    public Computer getCom() {
         return computer;
     }
 
-    public void setLaptop(Computer com) {
+    public void setCom(Computer com) {
         this.computer = com;
     }
 }
