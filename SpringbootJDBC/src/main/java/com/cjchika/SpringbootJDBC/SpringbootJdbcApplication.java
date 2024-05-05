@@ -15,9 +15,9 @@ public class SpringbootJdbcApplication {
 		ApplicationContext context =  SpringApplication.run(SpringbootJdbcApplication.class, args);
 
 		Student st = context.getBean(Student.class);
-		st.setRollNo(1);
+		st.setRollNo(100);
 		st.setName("CJ");
-		st.setMarks(100);
+		st.setMarks(98);
 
 		StudentService service = context.getBean(StudentService.class);
 		service.addStudent(st);
