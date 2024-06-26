@@ -1,26 +1,19 @@
 class Variable 
 {
-	public static void main(String a[]){
-		int num1 = 5;
-		byte bte = 127;
-		short sh = 558;
-		long l = 5834l;
+	public static void main(String []args){
 
-		float f = 8.4f;
-		double d = 18.2;
+		int x = 101;
+		float y = 5.133f;
+		long z = 123456789876543L;
+		boolean a = false;
+		char symbol = '@';
+		String name = "Boss";
 
-		char c = 'k';
-
-		boolean z = true;
-
-		// System.out.println(num1);
-		// System.out.println(bte);
-
-		// TYPE CONVERSION
-		int e = 342;
-		byte h = (byte) e;
-
-		System.out.println(h);
-		
+		System.out.println(symbol);
+		System.out.println(name);
+		System.out.println(a);
+		System.out.println(x);
+		System.out.println(z);
+		System.out.println(y);
 	}
 }
