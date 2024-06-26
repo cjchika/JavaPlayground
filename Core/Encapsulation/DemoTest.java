@@ -28,7 +28,7 @@ class Human
 }
 
 
-public class Demo {
+public class DemoTest {
 
   public static void main(String[] args) {
 

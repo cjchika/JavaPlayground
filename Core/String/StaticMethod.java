@@ -1,4 +1,4 @@
-class Mobile 
+class Mobile1
 {
 	String brand;
 	int price;
@@ -17,19 +17,19 @@ class Mobile
 public class StaticMethod {
     public static void main(String[] args){
 
-			Mobile.name = "Phone";
+		Mobile1.name = "Phone";
 
-			Mobile mob1 = new Mobile();
+		Mobile1 mob1 = new Mobile1();
 			mob1.brand = "Apple";
 			mob1.price = 2000;
 
-			Mobile mob2 = new Mobile();
+		Mobile1 mob2 = new Mobile1();
 			mob2.brand = "Samsung";
 			mob2.price = 2400;
 
 			mob1.show();
 			mob2.show();
 
-			Mobile.display();
+		Mobile1.display();
     }
 }
