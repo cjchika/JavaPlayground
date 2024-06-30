@@ -1,14 +1,18 @@
+import java.util.Scanner;
+
 class WhileLoop
 {
 	public static void main(String[] args)
 	{
-		int a = 1;
+		Scanner scanner = new Scanner(System.in);
 
-		while(a <= 5)
+		String name = "";
+
+		while(name.isBlank())
 		{
-			System.out.println("a is" + " " + a);
-			a++;
+			System.out.println("Enter your name: ");
+			name = scanner.nextLine();
 		}
-		System.out.println("Bye!!!");
+		System.out.println("Welcome - "+ name);
 	}
 }
