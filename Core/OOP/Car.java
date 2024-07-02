@@ -12,4 +12,8 @@ public class Car {
     void brake(){
         System.out.println("You matched on the car's break!");
     }
+
+    public String toString(){
+        return make + "\n" +model+"\n"+color+"\n"+year;
+    }
 }
