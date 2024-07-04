@@ -1,16 +1,15 @@
 public class Dog {
     String name;
     int age;
+    String breed;
 
-    Dog(String name, int age){
-        this.name = name;
-        this.age = age;
-    }
+//    Dog(String name, int age){
+//        this.name = name;
+//        this.age = age;
+//    }
 
-    void bark(int num){
-        for(int i = 1; i<=num;i++){
-            System.out.println("The Dog barks!");
-        }
+    void bark(){
+        System.out.println("Ruff! Ruff!");
     }
 
     void play(){

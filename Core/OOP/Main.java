@@ -12,14 +12,7 @@ public class Main {
 //        Cake cake = new Cake("The Flour", "The Sauce", "The Sugar");
 //
 //        System.out.println(cake.sugar);
-
-
-        int age = 10;
-        String name = "Champ";
-
-        Dog myDog = new Dog(name, age);
-
-        int x = age - 5;
+//        ----
 
 //        if(x < 8) myDog.bark(4);
 //
@@ -44,24 +37,35 @@ public class Main {
 //        }
 //        System.out.println("After the Loop.");
 
-        int beerNum = 99;
-        String word = "bottles";
+//        -----
 
-        while(beerNum > 0){
-            if(beerNum == 1){
-                word = "bottle";
-            }
+//        int beerNum = 99;
+//        String word = "bottles";
+//
+//        while(beerNum > 0){
+//            if(beerNum == 1){
+//                word = "bottle";
+//            }
+//
+//            System.out.println(beerNum + " " + word + " of beer on the wall");
+//            System.out.println(beerNum + " " + word + " of beer.");
+//            System.out.println("Take one down.");
+//            System.out.println("Pass it around");
+//            beerNum = beerNum - 1;
+//
+//            if(beerNum == 0) {
+//                System.out.println("No more bottles of beer on the wall");
+//            }
+//        }
 
-            System.out.println(beerNum + " " + word + " of beer on the wall");
-            System.out.println(beerNum + " " + word + " of beer.");
-            System.out.println("Take one down.");
-            System.out.println("Pass it around");
-            beerNum = beerNum - 1;
+//        -----
 
-            if(beerNum == 0) {
-                System.out.println("No more bottles of beer on the wall");
-            }
-        }
+        Dog myDog = new Dog();
+        myDog.age = 10;
+        myDog.name = "Champion";
+        myDog.breed = "German Shepherd";
+
+        myDog.bark();
 
     }
 }
