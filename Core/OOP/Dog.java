@@ -1,6 +1,5 @@
 public class Dog {
     String name;
-    int age;
     String breed;
 
 //    Dog(String name, int age){
@@ -9,10 +8,7 @@ public class Dog {
 //    }
 
     void bark(){
-        System.out.println("Ruff! Ruff!");
+        System.out.println(name + " says Ruff!");
     }
 
-    void play(){
-        System.out.println("Playing dog...");
-    }
 }
