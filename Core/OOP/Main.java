@@ -75,18 +75,15 @@ public class Main {
         pets[1] = new Dog();
         pets[2] = new Dog();
 
-        pets[0].name = "Tiger";
-//        pets[0].breed = "Ekuke";
+        pets[0].setName("Tiger");
 
-        pets[1].name = "Champion";
-//        pets[1].breed = "German Shepherd";
+        pets[1].setName("Champion");
 
-        pets[2].name = "Rough";
-//        pets[2].breed = "Dangerous";
+        pets[2].setName("Rough");
 
         for(int i = 0; i < pets.length; i++){
             pets[i].bark(3);
         }
-
+        System.out.println(pets[0].getName());
     }
 }
