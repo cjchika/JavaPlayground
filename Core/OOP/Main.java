@@ -76,16 +76,16 @@ public class Main {
         pets[2] = new Dog();
 
         pets[0].name = "Tiger";
-        pets[0].breed = "Ekuke";
+//        pets[0].breed = "Ekuke";
 
         pets[1].name = "Champion";
-        pets[1].breed = "German Shepherd";
+//        pets[1].breed = "German Shepherd";
 
         pets[2].name = "Rough";
-        pets[2].breed = "Dangerous";
+//        pets[2].breed = "Dangerous";
 
         for(int i = 0; i < pets.length; i++){
-            pets[i].bark();
+            pets[i].bark(3);
         }
 
     }
