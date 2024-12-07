@@ -24,6 +24,7 @@ class Phone {
     }
 }
 
+
 public class Main {
 
     public static void main(String[] args) {
@@ -32,8 +33,12 @@ public class Main {
 
         String ph1 = phone.getBrand();
         String ph2 = phone1.getBrand();
-        
-        System.out.println(ph1);
-        System.out.println(ph2);
+
+//        INHERITANCE
+        Suv suv = new Suv("Lexus", 2025, 4);
+
+        suv.startEngine();
+        suv.stopEngine();
+        suv.displaySuvInfo();
     }
 }
