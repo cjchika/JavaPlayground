@@ -1,5 +1,21 @@
 import tools.*;
 
+interface A {
+    void show();
+    void config();
+}
+
+class B implements A {
+    @Override
+    public void show() {
+        System.out.println("Show");
+    }
+
+    @Override
+    public void config() {
+        System.out.println("Config");
+    }
+}
 
 public class Main {
 
@@ -12,9 +28,12 @@ public class Main {
 
 //        INHERITANCE
         Suv suv = new Suv("Lexus", 2025, 4);
+//        suv.startEngine();
+//        suv.stopEngine();
+//        suv.displaySuvInfo();
 
-        suv.startEngine();
-        suv.stopEngine();
-        suv.displaySuvInfo();
+        B b = new B();
+
+        b.show();
     }
 }
