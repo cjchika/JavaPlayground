@@ -3,6 +3,7 @@ import tools.*;
 interface A {
     void show();
     void config();
+    int add(int a, int b);
 }
 
 class B implements A {
@@ -15,6 +16,11 @@ class B implements A {
     public void config() {
         System.out.println("Config");
     }
+
+    @Override
+    public int add(int i, int j){
+        return i + j;
+    };
 }
 
 public class Main {
@@ -33,7 +39,8 @@ public class Main {
 //        suv.displaySuvInfo();
 
         B b = new B();
+        int res = b.add(20, 50);
 
-        b.show();
+        System.out.println(res);
     }
 }
