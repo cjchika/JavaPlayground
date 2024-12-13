@@ -1,40 +1,30 @@
 package quiz;
 
-class A extends Thread{
-    public void run(){
-      for (int i =1; i <=10;i++){
-          System.out.println("Hi");
-          try {
-              Thread.sleep(10);
-          } catch (InterruptedException e) {
-              throw new RuntimeException(e);
-          }
-      }
-    }
-}
-
-class B extends Thread{
-    public void run(){
-        for (int i =1; i <=10;i++){
-            System.out.println("Hello");
-            try {
-                Thread.sleep(10);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-        }
-    }
-}
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
         QuestionService svc = new QuestionService();
 //        svc.playQuiz();
 
-        A obj1 = new A();
-        B obj2 = new B();
+        List<Integer> nums = new ArrayList<Integer>();
+        nums.add(10);
+        nums.add(8);
+        nums.add(6);
 
-        obj1.start();
-        obj2.start();
+//        for(int n : nums){
+//            System.out.println(n);
+//        }
+
+//        System.out.println(nums.get(1));
+
+        Map<String, Integer> students = new HashMap<>();
+
+        students.put("Josh",60);
+        students.put("Mark",20);
+
+        System.out.println(students);
+        System.out.println(students.get("Josh"));
     }
+
 }
