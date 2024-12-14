@@ -3,8 +3,13 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="developer" class="com.cjchika.Developer" scope="singleton">
+    <bean id="developer" class="com.cjchika.Developer" scope="prototype">
+<!--        <constructor-arg type="int" value="40" />-->
+<!--        <constructor-arg type="com.cjchika.Laptop" ref="lap" />-->
+<!--        <property name="laptop" ref="lap" />-->
 
+        <constructor-arg index="0" value="40" />
+        <constructor-arg index="1" ref="lap" />
     </bean>
 
     <bean id="lap" class="com.cjchika.Laptop">

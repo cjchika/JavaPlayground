@@ -10,6 +10,8 @@ public class App
         ApplicationContext ctx = new ClassPathXmlApplicationContext("spring.xml");
 
         Developer dev = (Developer) ctx.getBean("developer");
+
+        System.out.println(dev.getAge());
         dev.code();
 
     }
