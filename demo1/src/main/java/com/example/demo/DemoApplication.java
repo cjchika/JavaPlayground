@@ -11,7 +11,7 @@ public class DemoApplication {
 	ApplicationContext context = SpringApplication.run(DemoApplication.class, args);
 
 	Engineer eng = context.getBean(Engineer.class);
-	eng.code();
+		System.out.println(eng.getAge());
+		eng.code();
 	}
-
 }
