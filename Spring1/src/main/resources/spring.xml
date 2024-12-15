@@ -8,7 +8,7 @@
 <!--        <constructor-arg type="com.cjchika.Laptop" ref="lap" />-->
 
         <property name="age" value="90"/>
-        <property name="comp" ref="com1" />
+        <property name="com" ref="com1" />
 
 <!--        <constructor-arg index="0" value="40" />-->
 <!--        <constructor-arg index="1" ref="lap" />-->
