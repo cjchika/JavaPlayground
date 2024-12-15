@@ -3,15 +3,15 @@ package com.cjchika;
 public class Developer {
 
     private int age;
-    private Laptop laptop;
+    private Computer com;
 
     public Developer(){
-        System.out.println("Developer object created!");
+//        System.out.println("Developer object created!");
     }
 
-    public Developer(int age, Laptop laptop){
+    public Developer(int age, Computer com){
         this.age = age;
-        this.laptop = laptop;
+        this.com = com;
     }
 
     public void setAge(int age) {
@@ -22,15 +22,16 @@ public class Developer {
         return age;
     }
 
-    public Laptop getLaptop() {
-        return laptop;
+    public Computer getComp() {
+        return com;
     }
 
-    public void setLaptop(Laptop laptop) {
-        this.laptop = laptop;
+    public void setComp(Computer com) {
+        this.com = com;
     }
 
     public void code(){
         System.out.println("Coding...");
+        com.compile();
     }
 }

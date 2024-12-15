@@ -1,7 +1,9 @@
 package com.cjchika;
 
-public class Laptop {
-    public Laptop(){
-        System.out.println("Compiling...");
+public class Laptop implements Computer{
+
+    @Override
+    public void compile() {
+        System.out.println("Compiling using Laptop...");
     }
 }

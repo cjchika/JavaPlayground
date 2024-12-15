@@ -3,16 +3,18 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="developer" class="com.cjchika.Developer" scope="prototype">
+    <bean id="developer" class="com.cjchika.Developer" scope="prototype" autowire="byType">
 <!--        <constructor-arg type="int" value="40" />-->
 <!--        <constructor-arg type="com.cjchika.Laptop" ref="lap" />-->
-<!--        <property name="laptop" ref="lap" />-->
 
-        <constructor-arg index="0" value="40" />
-        <constructor-arg index="1" ref="lap" />
+        <property name="age" value="90"/>
+        <property name="comp" ref="com1" />
+
+<!--        <constructor-arg index="0" value="40" />-->
+<!--        <constructor-arg index="1" ref="lap" />-->
     </bean>
 
-    <bean id="lap" class="com.cjchika.Laptop">
+    <bean id="com1" class="com.cjchika.Laptop" />
+    <bean id="com2" class="com.cjchika.Desktop" lazy-init="true"/>
 
-    </bean>
 </beans>
