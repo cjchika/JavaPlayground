@@ -7,12 +7,12 @@
     <body>
         <h1>Hello World Calculator!</h1>
 
-        <form action="add">
-            <label>Enter 1st Number : </label>
-            <input type="text" id="num1" name="num1"/><br>
+        <form action="addAlien">
+            <label>Enter Id : </label>
+            <input type="text" id="aid" name="aid"/><br>
 
-            <label>Enter 2nd Number : </label>
-            <input type="text" id="num2" name="num2"/><br>
+            <label>Enter Name : </label>
+            <input type="text" id="aname" name="aname"/><br>
 
             <input type="submit" value="Submit">
         </form>
