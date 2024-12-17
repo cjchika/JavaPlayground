@@ -68,7 +68,7 @@ p {
 				<div class="card bg-warning">
 					<div class="card-body text-center">
 						<h5 class="card-title">View AllJobs</h5>
-						<form action="/viewalljobs" method="get">
+						<form action="viewalljobs" method="get">
 							<!-- Add your form fields here -->
 							<button type="submit" class="btn btn-primary">Submit</button>
 						</form>
@@ -81,7 +81,7 @@ p {
 				<div class="card">
 					<div class="card-body text-center">
 						<h5 class="card-title">Add Job</h5>
-						<form action="/addjob" method="get">
+						<form action="addjob" method="get">
 							<!-- Your form fields go here if needed -->
 
 							<button type="submit" class="btn btn-primary">Submit</button>
