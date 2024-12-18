@@ -4,10 +4,7 @@ import com.cjchika.jobapp_rest_api.model.JobPost;
 import com.cjchika.jobapp_rest_api.service.JobService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,5 +22,11 @@ public class JobRestController {
     @GetMapping("post/{jobId}")
     public JobPost getJob(@PathVariable int jobId){
         return service.getJob(jobId);
+    }
+
+    @PostMapping("post")
+    public JobPost addJob(@RequestBody JobPost jobPost){
+        service.addJob(jobPost);
+        return service.getJob(jobPost.getPostId());
     }
 }
