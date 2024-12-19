@@ -18,8 +18,8 @@ public class SpringDataJpaApplication {
 		Student stud2 = context.getBean(Student.class);
 
 		stud1.setRollNo(1);
-		stud1.setName("Max");
-		stud1.setMarks(88);
+		stud1.setName("Maximilian");
+		stud1.setMarks(90);
 
 		stud2.setRollNo(2);
 		stud2.setName("Josh");
@@ -28,7 +28,7 @@ public class SpringDataJpaApplication {
 //		repo.save(stud1);
 //		repo.save(stud2);
 
-		System.out.println(repo.findById(1));
+//		System.out.println(repo.findByName("Josh"));
+//		System.out.println(repo.findByMarks(88));
 	}
-
 }
