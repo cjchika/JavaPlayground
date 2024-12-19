@@ -3,7 +3,6 @@ package com.cjchika.jobapp_rest_api;
 import com.cjchika.jobapp_rest_api.model.JobPost;
 import com.cjchika.jobapp_rest_api.service.JobService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -40,5 +39,11 @@ public class JobRestController {
     public String deleteJob(@PathVariable int jobId){
         service.deleteJob(jobId);
         return "Deleted";
+    }
+
+    @GetMapping("load")
+    public String loadData(){
+        service.load();
+        return "Hit";
     }
 }
