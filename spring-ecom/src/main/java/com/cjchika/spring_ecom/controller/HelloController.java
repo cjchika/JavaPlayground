@@ -1,6 +1,5 @@
-package com.cjchika.spring_ecom;
+package com.cjchika.spring_ecom.controller;
 
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
