@@ -1,5 +1,6 @@
 package com.cjchika.spring_ecom.service;
 
+import com.cjchika.spring_ecom.EcomExceptions.ProductNotFoundException;
 import com.cjchika.spring_ecom.model.Product;
 import com.cjchika.spring_ecom.repository.ProductRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,6 @@ public class ProductService {
     }
 
     public Product getProductById(int productId) {
-        return productRepo.findById(productId).get();
+        return productRepo.findById(productId).orElseThrow(() -> new ProductNotFoundException("Product not found with Id: " + productId));
     }
 }
