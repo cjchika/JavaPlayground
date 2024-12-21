@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
 import java.util.Date;
 
 @Entity
@@ -49,9 +50,21 @@ public class Product {
     @JsonProperty("imageType")
     private String imageType;
 
-    @JsonProperty("imageData")
     @Lob
+    @JsonProperty("imageData")
     private byte[] imageData;
+
+    public void setImageName(String imageName) {
+        this.imageName = imageName;
+    }
+
+    public void setImageType(String imageType) {
+        this.imageType = imageType;
+    }
+
+    public void setImageData(byte[] imageData) {
+        this.imageData = imageData;
+    }
 
     @Override
     public String toString() {
@@ -65,6 +78,9 @@ public class Product {
                 ", releaseDate=" + releaseDate +
                 ", productAvailable=" + productAvailable +
                 ", stockQuantity=" + stockQuantity +
+                ", imageName='" + imageName + '\'' +
+                ", imageType='" + imageType + '\'' +
+                ", imageData=" + Arrays.toString(imageData) +
                 '}';
     }
 }

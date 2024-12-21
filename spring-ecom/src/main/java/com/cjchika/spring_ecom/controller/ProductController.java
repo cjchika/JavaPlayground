@@ -24,18 +24,20 @@ public class ProductController {
         return new ResponseEntity<>(productService.getAllProducts(), HttpStatus.OK);
     }
 
-    @GetMapping("/products/{id}")
+    @GetMapping("/product/{id}")
     public ResponseEntity<Product> getProductById(@PathVariable int id){
         Product product = productService.getProductById(id);
 
         return new ResponseEntity<>(product, HttpStatus.OK);
     }
 
-    @GetMapping("/product")
-    public ResponseEntity<?> addProduct(@RequestPart Product product, @RequestPart MultipartFile image){
+    
+
+    @PostMapping("/product")
+    public ResponseEntity<?> addProduct(@RequestPart Product product, @RequestPart MultipartFile imageFile){
         Product newProduct = null;
         try {
-            newProduct = productService.addProduct(product, image);
+            newProduct = productService.addProduct(product, imageFile);
             return  new ResponseEntity<>(newProduct, HttpStatus.CREATED);
         } catch (IOException e) {
             return  new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
