@@ -66,6 +66,18 @@ public class Product {
         this.imageData = imageData;
     }
 
+    public String getImageName() {
+        return imageName;
+    }
+
+    public String getImageType() {
+        return imageType;
+    }
+
+    public byte[] getImageData() {
+        return imageData;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
