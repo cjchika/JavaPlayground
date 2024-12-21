@@ -1,10 +1,7 @@
 package com.cjchika.spring_ecom.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -45,6 +42,16 @@ public class Product {
 
     @JsonProperty("stockQuantity")
     private int stockQuantity;
+
+    @JsonProperty("imageName")
+    private String imageName;
+
+    @JsonProperty("imageType")
+    private String imageType;
+
+    @JsonProperty("imageData")
+    @Lob
+    private byte[] imageData;
 
     @Override
     public String toString() {
