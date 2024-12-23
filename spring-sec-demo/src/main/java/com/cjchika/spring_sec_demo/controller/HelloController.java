@@ -9,6 +9,6 @@ public class HelloController {
 
     @GetMapping("hello")
     public String greet(HttpServletRequest req){
-        return "Hello World! " + req.getSession().getId();
+        return "Hello World!";
     }
 }
