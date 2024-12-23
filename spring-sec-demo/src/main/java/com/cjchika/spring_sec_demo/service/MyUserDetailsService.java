@@ -1,6 +1,7 @@
 package com.cjchika.spring_sec_demo.service;
 
 import com.cjchika.spring_sec_demo.model.User;
+import com.cjchika.spring_sec_demo.model.UserPrincipal;
 import com.cjchika.spring_sec_demo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -17,12 +18,12 @@ public class MyUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-        User user = userRepository.findByUserName(username);
+        User user = userRepository.findByUsername(username);
         if(user == null){
-            System.out.println("User not found!");
+//            System.out.println("User not found!");
             throw new UsernameNotFoundException("User not found!");
         }
 
-        return null;
+        return new UserPrincipal(user);
     }
 }
