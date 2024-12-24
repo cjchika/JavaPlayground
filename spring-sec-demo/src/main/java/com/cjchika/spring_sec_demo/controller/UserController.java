@@ -1,5 +1,6 @@
 package com.cjchika.spring_sec_demo.controller;
 
+import com.cjchika.spring_sec_demo.service.JwtService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -18,6 +19,9 @@ public class UserController {
     private UserService userService;
 
     @Autowired
+    private JwtService jwtService;
+
+    @Autowired
     AuthenticationManager authenticationManager;
 
     @PostMapping("register")
@@ -32,7 +36,7 @@ public class UserController {
                 .authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(), user.getPassword()));
 
         if(authentication.isAuthenticated())
-            return "Success";
+            return jwtService.generateToken(user.getUsername());
         else
             return "Login Failed";
     }
